@@ -1,4 +1,4 @@
-# data
+# dummy
 Dummy data generator
 
 ## Usage
