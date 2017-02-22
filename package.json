@@ -1,0 +1,31 @@
+{
+  "name": "data",
+  "version": "0.0.1",
+  "description": "Schema definitions and dummy data generator",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nudj/data.git"
+  },
+  "keywords": [
+    "data"
+  ],
+  "author": "Nick Collings",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nudj/data/issues"
+  },
+  "homepage": "https://github.com/nudj/data#readme",
+  "dependencies": {
+    "casual": "^1.5.10",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
