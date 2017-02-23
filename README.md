@@ -4,8 +4,8 @@ Dummy data generator
 ## Usage
 
 ```
-let generateDummyData = require('nudj/data')
-let dummyData = generateDummyData({
+let dummy = require('nudj/dummy')
+let dummyData = dummy({
   cars: {
     schema: require('./car-schema.json'),
     count: 20
