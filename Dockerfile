@@ -1,4 +1,4 @@
-FROM node:6.9.1
+FROM node:6.10.0
 WORKDIR /usr/src
 COPY package.json /usr/src/package.json
 RUN cd /usr/src && npm i
