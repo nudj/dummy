@@ -8,11 +8,15 @@ steps:
     image_name: nudj/dummy-build
     working_directory: ${{main_clone}}
     dockerfile: Dockerfile
+    environment:
+      - NPM_TOKEN=${{NPM_TOKEN}}
 
   test:
     title: Run tests
     image: ${{build}}
     working_directory: 'IMAGE_WORK_DIR'
+    environment:
+      - NPM_TOKEN=${{NPM_TOKEN}}
 
   push:
     title: Publish package to npm
@@ -20,6 +24,8 @@ steps:
     working_directory: 'IMAGE_WORK_DIR'
     commands:
       - npm publish
+    environment:
+      - NPM_TOKEN=${{NPM_TOKEN}}
     when:
       branch:
         only:
