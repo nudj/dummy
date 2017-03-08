@@ -1,6 +1,6 @@
-FROM node:6.10.0
+FROM node:6.10.0-alpine
+RUN mkdir -p /usr/src
 WORKDIR /usr/src
-COPY package.json /usr/src/package.json
-RUN cd /usr/src && npm i
-COPY src /usr/src/src
-CMD ./node_modules/.bin/mocha src/test/*.js
+COPY src /usr/src
+RUN npm i
+CMD ./node_modules/.bin/standard && ./node_modules/.bin/mocha test/*.js
