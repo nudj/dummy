@@ -8,7 +8,7 @@ steps:
     image_name: nudj/dummy-build
     working_directory: ${{main_clone}}
     dockerfile: Dockerfile
-    environment:
+    build_arguments:
       - NPM_TOKEN=${{NPM_TOKEN}}
 
   test:
