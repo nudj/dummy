@@ -1,6 +1,6 @@
 {
   "name": "@nudj/dummy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Dummy data generator",
   "main": "lib/index.js",
   "repository": {
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "dirty-chai": "^1.2.2",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
     "standard": "^9.0.1"
