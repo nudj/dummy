@@ -13,16 +13,53 @@ describe('Dummy', function () {
     expect(dummy({
       cars: {
         schema: {
-          color: 'safe_color_name',
-          name: 'first_name'
+          color: {
+            example: {
+              fn: 'safe_color_name'
+            }
+          },
+          name: {
+            example: {
+              fn: 'first_name'
+            }
+          },
+          words: {
+            example: {
+              fn: 'words',
+              args: [3]
+            }
+          },
+          integer: {
+            example: {
+              fn: 'integer',
+              args: [0, 10]
+            }
+          },
+          status: {
+            example: {
+              fn: 'choice',
+              args: [['Backlog', 'Ready', 'In Development', 'Done']]
+            }
+          }
         },
-        count: 3
+        count: 2
       }
     })).to.deep.equal({
       cars: [
-        { color: 'gray', name: 'Mervin' },
-        { color: 'olive', name: 'Hilda' },
-        { color: 'navy', name: 'Maryse' }
+        {
+          color: 'gray',
+          integer: 7,
+          name: 'Mervin',
+          status: 'In Development',
+          words: 'quis molestiae tempora'
+        },
+        {
+          color: 'gray',
+          integer: 10,
+          name: 'Millie',
+          status: 'Ready',
+          words: 'quos nihil omnis'
+        }
       ]
     })
   })
