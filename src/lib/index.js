@@ -1,8 +1,12 @@
 let times = require('lodash/times')
 let mapValues = require('lodash/mapValues')
+let reduce = require('lodash/reduce')
 let generators = require('./generators')
 
-let item = (schema) => mapValues(schema, ({ example }) => generators[example.fn].apply(null, example.args))
+let item = (schema) => reduce(schema, (result, { example }, key) => {
+  result[key] = generators[example.fn].apply(null, (example.args || []).concat(result))
+  return result
+}, {})
 
 let collection = (schema, count) => times(count, (index) => Object.assign({ id: index + 1 }, item(schema)))
 

@@ -40,6 +40,12 @@ describe('Dummy', function () {
               fn: 'choice',
               args: [['Backlog', 'Ready', 'In Development', 'Done']]
             }
+          },
+          slug: {
+            example: {
+              fn: 'slug',
+              args: ['words']
+            }
           }
         },
         count: 2
@@ -52,7 +58,8 @@ describe('Dummy', function () {
           integer: 7,
           name: 'Mervin',
           status: 'In Development',
-          words: 'quis molestiae tempora'
+          words: 'quis molestiae tempora',
+          slug: 'quis-molestiae-tempora'
         },
         {
           id: 2,
@@ -60,7 +67,8 @@ describe('Dummy', function () {
           integer: 10,
           name: 'Millie',
           status: 'Ready',
-          words: 'quos nihil omnis'
+          words: 'quos nihil omnis',
+          slug: 'quos-nihil-omnis'
         }
       ]
     })
