@@ -53,7 +53,7 @@ describe('Dummy', function () {
     })).to.deep.equal({
       cars: [
         {
-          id: 1,
+          id: '1',
           color: 'gray',
           integer: 7,
           name: 'Mervin',
@@ -62,7 +62,7 @@ describe('Dummy', function () {
           slug: 'quis-molestiae-tempora'
         },
         {
-          id: 2,
+          id: '2',
           color: 'gray',
           integer: 10,
           name: 'Millie',
