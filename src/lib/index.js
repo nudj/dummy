@@ -8,6 +8,6 @@ let item = (schema) => reduce(schema, (result, { example }, key) => {
   return result
 }, {})
 
-let collection = (schema, count) => times(count, (index) => Object.assign({ id: index + 1 }, item(schema)))
+let collection = (schema, count) => times(count, (index) => Object.assign({ id: `${index + 1}` }, item(schema)))
 
 module.exports = (options) => mapValues(options, (opts) => collection(opts.schema, opts.count))
