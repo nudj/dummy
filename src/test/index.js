@@ -46,6 +46,12 @@ describe('Dummy', function () {
               fn: 'slug',
               args: ['words']
             }
+          },
+          populate: {
+            example: {
+              fn: 'replace',
+              args: ['http://facebook.com/{{word}}']
+            }
           }
         },
         count: 2
@@ -57,6 +63,7 @@ describe('Dummy', function () {
           color: 'gray',
           integer: 7,
           name: 'Mervin',
+          populate: 'http://facebook.com/porro',
           status: 'In Development',
           words: 'quis molestiae tempora',
           slug: 'quis-molestiae-tempora'
@@ -64,11 +71,12 @@ describe('Dummy', function () {
         {
           id: '2',
           color: 'gray',
-          integer: 10,
-          name: 'Millie',
-          status: 'Ready',
-          words: 'quos nihil omnis',
-          slug: 'quos-nihil-omnis'
+          integer: 4,
+          name: 'Jennyfer',
+          populate: 'http://facebook.com/culpa',
+          slug: 'nihil-omnis-reiciendis',
+          status: 'In Development',
+          words: 'nihil omnis reiciendis'
         }
       ]
     })
