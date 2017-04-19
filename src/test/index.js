@@ -52,6 +52,29 @@ describe('Dummy', function () {
               fn: 'replace',
               args: ['http://facebook.com/{{word}}']
             }
+          },
+          related: {
+            example: {
+              fn: 'array_of_objects',
+              args: [{
+                url: {
+                  example: {
+                    fn: 'replace',
+                    args: ['/{{word}}/{{word}}-{{word}}']
+                  }
+                },
+                title: {
+                  example: {
+                    fn: 'title'
+                  }
+                },
+                location: {
+                  example: {
+                    fn: 'city'
+                  }
+                }
+              }, 3]
+            }
           }
         },
         count: 2
@@ -66,17 +89,57 @@ describe('Dummy', function () {
           populate: 'http://facebook.com/porro',
           status: 'In Development',
           words: 'quis molestiae tempora',
-          slug: 'quis-molestiae-tempora'
+          slug: 'quis-molestiae-tempora',
+          related: [
+            {
+              id: '1',
+              location: 'Jaydeville',
+              title: 'Reiciendis velit nobis',
+              url: '/porro/quos-nihil'
+            },
+            {
+              id: '2',
+              location: 'North Maude',
+              title: 'Qui quia odio',
+              url: '/reprehenderit/in-nisi'
+            },
+            {
+              id: '3',
+              location: 'South Mertiemouth',
+              title: 'Sit odio dolor',
+              url: '/in/deserunt-id'
+            }
+          ]
         },
         {
           id: '2',
-          color: 'gray',
-          integer: 4,
-          name: 'Jennyfer',
-          populate: 'http://facebook.com/culpa',
-          slug: 'nihil-omnis-reiciendis',
+          color: 'teal',
+          integer: 7,
+          name: 'Lorenza',
+          populate: 'http://facebook.com/laborum',
+          slug: 'ullam-pariatur-quos',
           status: 'In Development',
-          words: 'nihil omnis reiciendis'
+          words: 'ullam pariatur quos',
+          related: [
+            {
+              id: '1',
+              location: 'East Darrion',
+              title: 'Et commodi',
+              url: '/ea/quisquam-esse'
+            },
+            {
+              id: '2',
+              location: 'South Chaimport',
+              title: 'Explicabo omnis iusto',
+              url: '/exercitationem/maiores-et'
+            },
+            {
+              id: '3',
+              location: 'Skyefurt',
+              title: 'Necessitatibus molestiae',
+              url: '/sequi/molestiae-beatae'
+            }
+          ]
         }
       ]
     })
