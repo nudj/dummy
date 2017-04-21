@@ -75,6 +75,12 @@ describe('Dummy', function () {
                 }
               }, 3]
             }
+          },
+          replaceDate: {
+            example: {
+              fn: 'replace',
+              args: ['{{date}}']
+            }
           }
         },
         count: 2
@@ -109,37 +115,39 @@ describe('Dummy', function () {
               title: 'Sit odio dolor',
               url: '/in/deserunt-id'
             }
-          ]
+          ],
+          replaceDate: '1990-03-29'
         },
         {
           id: '2',
-          color: 'teal',
+          color: 'silver',
           integer: 7,
-          name: 'Lorenza',
-          populate: 'http://facebook.com/laborum',
-          slug: 'ullam-pariatur-quos',
+          name: 'Eliane',
+          populate: 'http://facebook.com/ea',
+          slug: 'pariatur-quos-est',
           status: 'In Development',
-          words: 'ullam pariatur quos',
+          words: 'pariatur quos est',
           related: [
             {
               id: '1',
-              location: 'East Darrion',
-              title: 'Et commodi',
-              url: '/ea/quisquam-esse'
+              location: 'West Xzavier',
+              title: 'Commodi autem incidunt',
+              url: '/quisquam/esse-quia'
             },
             {
               id: '2',
-              location: 'South Chaimport',
-              title: 'Explicabo omnis iusto',
-              url: '/exercitationem/maiores-et'
+              location: 'South Cara',
+              title: 'Iusto doloremque et',
+              url: '/et/voluptas-explicabo'
             },
             {
               id: '3',
-              location: 'Skyefurt',
-              title: 'Necessitatibus molestiae',
-              url: '/sequi/molestiae-beatae'
+              location: 'Tyreeport',
+              title: 'Molestiae placeat saepe',
+              url: '/molestiae/beatae-enim'
             }
-          ]
+          ],
+          replaceDate: '1993-09-27'
         }
       ]
     })
