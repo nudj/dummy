@@ -55,7 +55,7 @@ describe('Dummy', function () {
           },
           related: {
             example: {
-              fn: 'array_of_objects',
+              fn: 'schema[]',
               args: [{
                 url: {
                   example: {
@@ -98,12 +98,6 @@ describe('Dummy', function () {
                 }
               }]
             }
-          },
-          replaceDate: {
-            example: {
-              fn: 'replace',
-              args: ['{{date}}']
-            }
           }
         },
         count: 2
@@ -144,45 +138,43 @@ describe('Dummy', function () {
             location: 'Florianchester',
             title: 'Quos est quod',
             url: '/molestiae/harum-ullam'
-          },
-          replaceDate: '1989-10-21'
+          }
         },
         {
           id: '2',
-          color: 'purple',
+          color: 'teal',
           integer: 2,
-          name: 'Madelyn',
-          populate: 'http://facebook.com/maiores',
-          slug: 'commodi-autem-incidunt',
+          name: 'Enola',
+          populate: 'http://facebook.com/exercitationem',
+          slug: 'et-commodi-autem',
           status: 'Ready',
-          words: 'commodi autem incidunt',
+          words: 'et commodi autem',
           related: [
             {
               id: '1',
-              location: 'South Cara',
-              title: 'Iusto doloremque et',
-              url: '/et/voluptas-explicabo'
+              location: 'South Chaimport',
+              title: 'Omnis iusto',
+              url: '/maiores/et-voluptas'
             },
             {
               id: '2',
-              location: 'Tyreeport',
-              title: 'Molestiae placeat saepe',
-              url: '/molestiae/beatae-enim'
+              location: 'Skyefurt',
+              title: 'Necessitatibus molestiae',
+              url: '/sequi/molestiae-beatae'
             },
             {
               id: '3',
-              location: 'West Marjorie',
-              title: 'Sed corporis voluptatem',
-              url: '/et/laudantium-fuga'
+              location: 'West Emilianoport',
+              title: 'Fuga similique',
+              url: '/earum/excepturi-et'
             }
           ],
           nested: {
             id: '1',
-            location: 'Feeneyport',
-            title: 'Atque dolores',
-            url: '/et/repudiandae-magnam'
-          },
-          replaceDate: '1990-09-27'
+            location: 'Port Darrel',
+            title: 'Magnam aut atque',
+            url: '/esse/soluta-et'
+          }
         }
       ]
     })
