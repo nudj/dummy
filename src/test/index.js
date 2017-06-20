@@ -134,7 +134,6 @@ describe('Dummy', function () {
             }
           ],
           nested: {
-            id: '1',
             location: 'Florianchester',
             title: 'Quos est quod',
             url: '/molestiae/harum-ullam'
@@ -170,7 +169,6 @@ describe('Dummy', function () {
             }
           ],
           nested: {
-            id: '1',
             location: 'Port Darrel',
             title: 'Magnam aut atque',
             url: '/esse/soluta-et'
