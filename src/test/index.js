@@ -76,6 +76,29 @@ describe('Dummy', function () {
               }, 3]
             }
           },
+          nested: {
+            example: {
+              fn: 'schema',
+              args: [{
+                url: {
+                  example: {
+                    fn: 'replace',
+                    args: ['/{{word}}/{{word}}-{{word}}']
+                  }
+                },
+                title: {
+                  example: {
+                    fn: 'title'
+                  }
+                },
+                location: {
+                  example: {
+                    fn: 'city'
+                  }
+                }
+              }]
+            }
+          },
           replaceDate: {
             example: {
               fn: 'replace',
@@ -116,38 +139,50 @@ describe('Dummy', function () {
               url: '/in/deserunt-id'
             }
           ],
-          replaceDate: '1990-03-29'
+          nested: {
+            id: '1',
+            location: 'Florianchester',
+            title: 'Quos est quod',
+            url: '/molestiae/harum-ullam'
+          },
+          replaceDate: '1989-10-21'
         },
         {
           id: '2',
-          color: 'silver',
-          integer: 7,
-          name: 'Eliane',
-          populate: 'http://facebook.com/ea',
-          slug: 'pariatur-quos-est',
-          status: 'In Development',
-          words: 'pariatur quos est',
+          color: 'purple',
+          integer: 2,
+          name: 'Madelyn',
+          populate: 'http://facebook.com/maiores',
+          slug: 'commodi-autem-incidunt',
+          status: 'Ready',
+          words: 'commodi autem incidunt',
           related: [
             {
               id: '1',
-              location: 'West Xzavier',
-              title: 'Commodi autem incidunt',
-              url: '/quisquam/esse-quia'
-            },
-            {
-              id: '2',
               location: 'South Cara',
               title: 'Iusto doloremque et',
               url: '/et/voluptas-explicabo'
             },
             {
-              id: '3',
+              id: '2',
               location: 'Tyreeport',
               title: 'Molestiae placeat saepe',
               url: '/molestiae/beatae-enim'
+            },
+            {
+              id: '3',
+              location: 'West Marjorie',
+              title: 'Sed corporis voluptatem',
+              url: '/et/laudantium-fuga'
             }
           ],
-          replaceDate: '1993-09-27'
+          nested: {
+            id: '1',
+            location: 'Feeneyport',
+            title: 'Atque dolores',
+            url: '/et/repudiandae-magnam'
+          },
+          replaceDate: '1990-09-27'
         }
       ]
     })

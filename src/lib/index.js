@@ -15,6 +15,7 @@ casual.define('choice', (options) => casual.random_element(options))
 casual.define('replace', (options) => casual.populate(options))
 casual.define('slug', (field, target) => kebabCase(target[field]))
 casual.define('array_of_objects', collection)
+casual.define('schema', (schema) => collection(schema, 1)[0])
 
 const generators = casual.functions()
 
