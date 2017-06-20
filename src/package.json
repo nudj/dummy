@@ -1,6 +1,6 @@
 {
   "name": "@nudj/dummy",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Dummy data generator",
   "main": "lib/index.js",
   "repository": {
