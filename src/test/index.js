@@ -55,7 +55,7 @@ describe('Dummy', function () {
           },
           related: {
             example: {
-              fn: 'array_of_objects',
+              fn: 'schema[]',
               args: [{
                 url: {
                   example: {
@@ -74,6 +74,29 @@ describe('Dummy', function () {
                   }
                 }
               }, 3]
+            }
+          },
+          nested: {
+            example: {
+              fn: 'schema',
+              args: [{
+                url: {
+                  example: {
+                    fn: 'replace',
+                    args: ['/{{word}}/{{word}}-{{word}}']
+                  }
+                },
+                title: {
+                  example: {
+                    fn: 'title'
+                  }
+                },
+                location: {
+                  example: {
+                    fn: 'city'
+                  }
+                }
+              }]
             }
           }
         },
@@ -109,37 +132,49 @@ describe('Dummy', function () {
               title: 'Sit odio dolor',
               url: '/in/deserunt-id'
             }
-          ]
+          ],
+          nested: {
+            id: '1',
+            location: 'Florianchester',
+            title: 'Quos est quod',
+            url: '/molestiae/harum-ullam'
+          }
         },
         {
           id: '2',
           color: 'teal',
-          integer: 7,
-          name: 'Lorenza',
-          populate: 'http://facebook.com/laborum',
-          slug: 'ullam-pariatur-quos',
-          status: 'In Development',
-          words: 'ullam pariatur quos',
+          integer: 2,
+          name: 'Enola',
+          populate: 'http://facebook.com/exercitationem',
+          slug: 'et-commodi-autem',
+          status: 'Ready',
+          words: 'et commodi autem',
           related: [
             {
               id: '1',
-              location: 'East Darrion',
-              title: 'Et commodi',
-              url: '/ea/quisquam-esse'
+              location: 'South Chaimport',
+              title: 'Omnis iusto',
+              url: '/maiores/et-voluptas'
             },
             {
               id: '2',
-              location: 'South Chaimport',
-              title: 'Explicabo omnis iusto',
-              url: '/exercitationem/maiores-et'
-            },
-            {
-              id: '3',
               location: 'Skyefurt',
               title: 'Necessitatibus molestiae',
               url: '/sequi/molestiae-beatae'
+            },
+            {
+              id: '3',
+              location: 'West Emilianoport',
+              title: 'Fuga similique',
+              url: '/earum/excepturi-et'
             }
-          ]
+          ],
+          nested: {
+            id: '1',
+            location: 'Port Darrel',
+            title: 'Magnam aut atque',
+            url: '/esse/soluta-et'
+          }
         }
       ]
     })
