@@ -55,7 +55,7 @@ describe('Dummy', function () {
           },
           related: {
             example: {
-              fn: 'array_of_objects',
+              fn: 'schema[]',
               args: [{
                 url: {
                   example: {
@@ -76,10 +76,27 @@ describe('Dummy', function () {
               }, 3]
             }
           },
-          replaceDate: {
+          nested: {
             example: {
-              fn: 'replace',
-              args: ['{{date}}']
+              fn: 'schema',
+              args: [{
+                url: {
+                  example: {
+                    fn: 'replace',
+                    args: ['/{{word}}/{{word}}-{{word}}']
+                  }
+                },
+                title: {
+                  example: {
+                    fn: 'title'
+                  }
+                },
+                location: {
+                  example: {
+                    fn: 'city'
+                  }
+                }
+              }]
             }
           }
         },
@@ -116,38 +133,48 @@ describe('Dummy', function () {
               url: '/in/deserunt-id'
             }
           ],
-          replaceDate: '1990-03-29'
+          nested: {
+            id: '1',
+            location: 'Florianchester',
+            title: 'Quos est quod',
+            url: '/molestiae/harum-ullam'
+          }
         },
         {
           id: '2',
-          color: 'silver',
-          integer: 7,
-          name: 'Eliane',
-          populate: 'http://facebook.com/ea',
-          slug: 'pariatur-quos-est',
-          status: 'In Development',
-          words: 'pariatur quos est',
+          color: 'teal',
+          integer: 2,
+          name: 'Enola',
+          populate: 'http://facebook.com/exercitationem',
+          slug: 'et-commodi-autem',
+          status: 'Ready',
+          words: 'et commodi autem',
           related: [
             {
               id: '1',
-              location: 'West Xzavier',
-              title: 'Commodi autem incidunt',
-              url: '/quisquam/esse-quia'
+              location: 'South Chaimport',
+              title: 'Omnis iusto',
+              url: '/maiores/et-voluptas'
             },
             {
               id: '2',
-              location: 'South Cara',
-              title: 'Iusto doloremque et',
-              url: '/et/voluptas-explicabo'
+              location: 'Skyefurt',
+              title: 'Necessitatibus molestiae',
+              url: '/sequi/molestiae-beatae'
             },
             {
               id: '3',
-              location: 'Tyreeport',
-              title: 'Molestiae placeat saepe',
-              url: '/molestiae/beatae-enim'
+              location: 'West Emilianoport',
+              title: 'Fuga similique',
+              url: '/earum/excepturi-et'
             }
           ],
-          replaceDate: '1993-09-27'
+          nested: {
+            id: '1',
+            location: 'Port Darrel',
+            title: 'Magnam aut atque',
+            url: '/esse/soluta-et'
+          }
         }
       ]
     })
