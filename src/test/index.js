@@ -9,7 +9,7 @@ chai.use(dirtyChai)
 let dummy = require('../lib')
 
 describe('Dummy', function () {
-  it('should work', function () {
+  it('work with these functions', function () {
     expect(dummy({
       cars: {
         schema: {
@@ -98,9 +98,15 @@ describe('Dummy', function () {
                 }
               }]
             }
+          },
+          replacements: {
+            example: {
+              fn: 'array_of_replacements',
+              args: ['{{word}}', 2]
+            }
           }
         },
-        count: 2
+        count: 1
       }
     })).to.deep.equal({
       cars: [
@@ -137,42 +143,33 @@ describe('Dummy', function () {
             location: 'Florianchester',
             title: 'Quos est quod',
             url: '/molestiae/harum-ullam'
+          },
+          replacements: ['esse', 'quia']
+        }
+      ]
+    })
+  })
+  it('should output according to the count provided', function () {
+    expect(dummy({
+      cars: {
+        schema: {
+          color: {
+            example: {
+              fn: 'safe_color_name'
+            }
           }
+        },
+        count: 2
+      }
+    })).to.deep.equal({
+      cars: [
+        {
+          id: '1',
+          color: 'silver'
         },
         {
           id: '2',
-          color: 'teal',
-          integer: 2,
-          name: 'Enola',
-          populate: 'http://facebook.com/exercitationem',
-          slug: 'et-commodi-autem',
-          status: 'Ready',
-          words: 'et commodi autem',
-          related: [
-            {
-              id: '1',
-              location: 'South Chaimport',
-              title: 'Omnis iusto',
-              url: '/maiores/et-voluptas'
-            },
-            {
-              id: '2',
-              location: 'Skyefurt',
-              title: 'Necessitatibus molestiae',
-              url: '/sequi/molestiae-beatae'
-            },
-            {
-              id: '3',
-              location: 'West Emilianoport',
-              title: 'Fuga similique',
-              url: '/earum/excepturi-et'
-            }
-          ],
-          nested: {
-            location: 'Port Darrel',
-            title: 'Magnam aut atque',
-            url: '/esse/soluta-et'
-          }
+          color: 'purple'
         }
       ]
     })
